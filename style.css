@@ -1,0 +1,49 @@
+/* MedBuddy Custom CSS Enhancements */
+*{
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+input,
+button,
+select {
+    outline: none;
+    border: none;
+}
+
+button {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+input:focus,
+select:focus {
+    box-shadow: 0 0 5px 2px rgba(0, 201, 167, 0.7);
+}
+
+li {
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+li:hover {
+    transform: scale(1.02);
+    background-color: #3a3a3a;
+}
+
+footer {
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+@media (max-width: 500px) {
+    .app-container {
+        width: 100%;
+    }
+}

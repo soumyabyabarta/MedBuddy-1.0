@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedBuddy - Daily Medication Reminder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gray-900 flex flex-col justify-between p-4">
+
+    <div class="flex-grow flex items-center justify-center">
+        <div class="app-container bg-gray-800 p-6 rounded-2xl shadow-2xl w-full max-w-md">
+            <h1 class="text-center text-3xl text-teal-400 mb-6 font-bold drop-shadow-lg">💊 MedBuddy</h1>
+
+            <div class="form-container flex flex-col gap-4 items-center">
+                <input type="text" id="medicineName" placeholder="Medicine Name" class="p-3 rounded-lg w-full text-black">
+                <input type="text" id="doseInput" placeholder="Dose (Optional)" class="p-3 rounded-lg w-full text-black">
+                <div class="flex gap-2 w-full">
+                    <input type="number" id="hourInput" placeholder="HH" min="0" max="23"
+                        class="p-3 rounded-lg w-1/4 text-black text-center">
+                    <input type="number" id="minuteInput" placeholder="MM" min="0" max="59"
+                        class="p-3 rounded-lg w-1/4 text-black text-center">
+                    <select id="repeatInput" class="p-3 rounded-lg w-1/2 text-black">
+                        <option value="daily">Daily</option>
+                        <option value="once">Once</option>
+                    </select>
+                </div>
+                <button id="addBtn"
+                    class="p-3 bg-teal-400 text-black rounded-lg font-bold hover:bg-teal-300 transition shadow-lg">Add
+                    Reminder</button>
+            </div>
+
+            <h2 class="text-white mt-6 mb-2 font-semibold text-xl">Your Reminders</h2>
+            <ul id="reminderList" class="space-y-3"></ul>
+        </div>
+    </div>
+
+    <footer class="text-gray-400 mb-4 text-center">
+        @ Soumya || 2025
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
